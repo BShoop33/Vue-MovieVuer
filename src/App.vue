@@ -1,28 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <v-app>
+    <v-app-bar app color="green darken-2" dark> </v-app-bar>
+
+    <v-main>
+      <v-container>
+        <app-header />
+        <search-results />
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import SearchResults from "./components/SearchResults";
+import AppHeader from "./components/AppHeader";
 
 export default {
-  name: "App",
   components: {
-    HelloWorld,
+    SearchResults,
+    AppHeader,
   },
+
+  data: () => ({
+    //
+  }),
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
