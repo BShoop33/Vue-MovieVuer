@@ -4,6 +4,7 @@
 
     <v-main>
       <v-container>
+        <app-header />
         <search-results />
       </v-container>
     </v-main>
@@ -12,10 +13,12 @@
 
 <script>
 import SearchResults from "./components/SearchResults";
+import AppHeader from "./components/AppHeader";
 
 export default {
   components: {
     SearchResults,
+    AppHeader,
   },
 
   data: () => ({
