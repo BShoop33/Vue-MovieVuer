@@ -1,22 +1,5 @@
 <template>
-  <v-app>
-    <app-header />
-    <v-main>
-      <v-container>
-        <search-results />
-        <v-row class="mt-6">
-          <v-col :sm="12" :md="6">
-            <movie-details />
-          </v-col>
-          <v-col :sm="12" :md="6">
-            <movie-reviews />
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-main>
-  </v-app>
-
-  <!-- <v-card v-if="movieDetails">
+  <v-card v-if="movieDetails">
     <v-img
       :src="`https://image.tmdb.org/t/p/w500${movieDetails.backdrop_path}`"
     ></v-img>
@@ -43,21 +26,15 @@
         </v-chip>
       </div>
     </v-card-text>
-  </v-card> -->
+  </v-card>
 </template>
 
 <script>
-import AppHeader from "./components/AppHeader.vue";
-import MovieDetails from "./components/MovieDetails.vue";
-import MovieReviews from "./components/MovieDetails.vue";
-import SearchResults from "./components/SearchResults";
+import { mapState } from "vuex";
 
 export default {
-  components: {
-    SearchResults,
-    AppHeader,
-    MovieDetails,
-    MovieReviews,
+  computed: {
+    ...mapState(["movieDetails"]),
   },
 };
 </script>
