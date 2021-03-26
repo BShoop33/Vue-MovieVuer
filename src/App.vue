@@ -48,8 +48,8 @@
 
 <script>
 import AppHeader from "./components/AppHeader.vue";
-import MovieDetails from "./components/MovieDetails.vue";
-import MovieReviews from "./components/MovieDetails.vue";
+import MovieDetails from "./components/MovieDetails";
+import MovieReviews from "./components/MovieReviews";
 import SearchResults from "./components/SearchResults";
 
 export default {
